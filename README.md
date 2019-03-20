@@ -1,0 +1,3 @@
+# mnist_springboot_dl4j
+
+这是一个deeplearing4j的入门项目mnist,手写数字识别，集成到了springboot框架。启动之后，可以通过浏览器访问，然后通过在浏览器的画布上手写数字进行识别。
