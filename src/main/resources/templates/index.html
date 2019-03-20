@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        div#text {
+            width: 300px;
+
+            background-color: #FFF500;
+            padding: 5px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            border-radius: 30px;
+
+        }
+
+        div#body {
+            width: 500px;
+
+            background-color: #00BB00;
+            padding: 5px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: green;
+            border-radius: 20px;
+            margin: 20px
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <div id="body">
+        <h1>手写数字识别程序</h1>
+        <br/>
+        <div id="text">
+			<p> &nbsp; &nbsp; 点击链接开启训练神经网络的模型，由于训练数据和测试数据十分庞大，这可能需要花费几分钟时间。
+					我们已经为您训练好了一个模型，您可以直接使用而不必点击“训练模型”的按钮！</p>
+		</div>
+
+        <br/>
+        <div>
+            <button id="tranning" onclick="modelTranning()">训练模型</button>
+            <a href="show">进入程序页面</a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function modelTranning() {
+        $.ajax({
+            url: "/tranningOfModel",
+            success: function () {
+                alert("训练成功！");
+
+            }
+        });
+
+    }
+</script>
+</html>
